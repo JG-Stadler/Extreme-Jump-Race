@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+body,html{
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+body{
+    display: grid;
+    place-content: center;
+}
+
+/* Game Window & Components*/
+
+.game-window{
+    min-height: 500px;
+    width: 800px;
+    max-width: 85vw;
+    overflow: hidden;
+    position: relative;
+    background-color: rgb(3, 172, 172);
+}
+.game-window img{
+    position: absolute;
+    object-fit: contain;
+}
+#city,#car{
+    bottom: 0;
+    left: 100%;
+}
+#clouds{
+    top: 0;
+    height: 300px;
+    left: 100%;
+}
+#player{
+    width: 100px;
+    left: 5%;
+    bottom: 0;
+}
