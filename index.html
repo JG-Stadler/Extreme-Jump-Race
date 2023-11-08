@@ -1,15 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/mainConfigurations.css">
+    <script src="js/getCaracters.js" defer></script>
+    <script src="js/characterAnimation.js" defer></script>
     <title>Extreme Jump Game</title>
 </head>
 <body>
     <main class="game-window">
-        <div class="main-menu"></div>
-        <div class="select-character"></div>
+
+        <div id="main-menu">
+            <h1 class="game-name">Extreme Jump Race</h1>
+            <button id="start-game">
+                Jogar
+            </button>
+            <a href="#" class="credits">Créditos</a>
+        </div>
+
+        <section class="select-character">
+            <h1>Selecione um personagem<br>
+            para iniciar</h1>
+
+                <div id="characters-container"></div>
+        </section>
 
         <img src="images/nuvens.webp" alt=""
         id="clouds">
