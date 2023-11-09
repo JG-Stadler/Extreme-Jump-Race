@@ -1,0 +1,40 @@
+.playerJump {
+  animation: Jump 2s linear;
+}
+.cityActive,
+.cloudsActive,
+.carActive {
+  animation: objectAnimation linear infinite;
+}
+.cityActive {
+  animation-duration: 15s;
+  animation-delay: 2s;
+}
+.cloudsActive {
+  animation-duration: 25s;
+  animation-delay: 5s;
+}
+.carActive {
+  animation-duration: 5s;
+  animation-delay: 3s;
+}
+
+@keyframes objectAnimation {
+  from {
+    left: 100%;
+  }
+  to {
+    left: -100%;
+  }
+}
+@keyframes Jump {
+  0% {
+    bottom: 100px;
+  }
+  50% {
+    bottom: 0;
+  }
+  100% {
+    bottom: 0;
+  }
+}

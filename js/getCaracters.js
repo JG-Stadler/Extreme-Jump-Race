@@ -31,6 +31,7 @@ function loadCharacters(charactersList) {
     characterBox.addEventListener("click", () => {
       newCharacter(characterBox.id);
       selectCharacterMenu.style.display = "none";
+      startGame();
     });
   }
 }
