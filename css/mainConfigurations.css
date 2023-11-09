@@ -45,6 +45,9 @@ body {
   left: 5%;
   bottom: 0;
 }
+#car,#player{
+  height: 20%;
+}
 
 /* Menu */
 
@@ -126,4 +129,27 @@ body {
   position: absolute;
   bottom: 3%;
   display: none;
+}
+
+#jumpButton {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  border-radius: 50%;
+  background-color: rgb(182, 181, 181);
+  border: solid black;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 3;
+  cursor: pointer;
+  opacity: 60%;
+}
+#jumpButton > img {
+  object-fit: contain;
+  width: 90%;
+  opacity: 50%;
 }

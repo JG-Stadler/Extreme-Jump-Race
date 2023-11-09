@@ -1,3 +1,6 @@
+const jumpButton = document.getElementById("jumpButton");
+const activatedPlayer = document.getElementById("player");
+
 function startGame() {
   const city = document.getElementById("city");
   const car = document.getElementById("car");
@@ -8,8 +11,9 @@ function startGame() {
   clouds.classList.add("cloudsActive");
 }
 
-const jumpButton = document.getElementById("jumpButton");
-
 jumpButton.addEventListener("click", () => {
-  player.classList.add("playerJump");
+    activatedPlayer.classList.add("playerJump");
+  setTimeout(()=>{
+  activatedPlayer.classList.remove("playerJump");
+},1500);
 });
