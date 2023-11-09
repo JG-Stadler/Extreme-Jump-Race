@@ -1,10 +1,10 @@
 [
-    {
-    "id":0,
-     "name": "Homem Aranha" ,
-     "frameRun1": "images/frame-spiderman-runing1.png",
-     "frameRun2": "images/frame-spiderman-runing2.png",
-     "frameRun3": "images/frame-spiderman-runing3.png",
-     "frameJump": "images/frame-spiderman-jumping.png"
-    }
+  {
+    "id": 0,
+    "name": "Homem Aranha",
+    "frameRun1": "images/frame-spiderman-runing1.png",
+    "frameRun2": "images/frame-spiderman-runing2.png",
+    "frameRun3": "images/frame-spiderman-runing3.png",
+    "frameJump": "images/frame-spiderman-jumping.png"
+  }
 ]

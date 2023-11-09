@@ -1,126 +1,129 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
 }
-body,html{
-    width: 100%;
-    min-height: 100vh;
-    box-sizing: border-box;
+body,
+html {
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
-body{
-    display: grid;
-    place-content: center;
+body {
+  display: grid;
+  place-content: center;
 }
 
 /* Game Window & Components*/
 
-.game-window{
-    min-height: 500px;
-    width: 800px;
-    max-width: 85vw;
-    overflow: hidden;
-    position: relative;
-    background-color: rgb(61, 177, 212);
-    border: solid 2px black;
-    border-bottom-width: 10px;
+.game-window {
+  min-height: 500px;
+  width: 800px;
+  max-width: 85vw;
+  overflow: hidden;
+  position: relative;
+  background-color: rgb(61, 177, 212);
+  border: solid 2px black;
+  border-bottom-width: 10px;
 }
-.game-window img{
-    position: absolute;
-    object-fit: contain;
+.game-window img {
+  position: absolute;
+  object-fit: contain;
 }
-#city,#car{
-    bottom: 0;
-    left: 100%;
+#city,
+#car {
+  bottom: 0;
+  left: 100%;
 }
-#clouds{
-    top: 0;
-    height: 300px;
-    left: 100%;
+#clouds {
+  top: 0;
+  height: 300px;
+  left: 100%;
 }
-#player{
-    width: 100px;
-    left: 5%;
-    bottom: 0;
+#player {
+  height: 100px;
+  left: 5%;
+  bottom: 0;
 }
 
 /* Menu */
 
-.game-name,.select-character>h1{
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
+.game-name,
+.select-character > h1 {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
 }
-#main-menu{
-    display: grid;
-    place-content: center;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 4;
-    background-color: #f1f1f1;
-    justify-items: center;
+#main-menu {
+  display: grid;
+  place-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  background-color: #f1f1f1;
+  justify-items: center;
 }
-#start-game{
-    background: none;
-    border: none;
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    cursor: pointer;
+#start-game {
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  cursor: pointer;
 }
-.credits{
-    text-decoration: none;
-    color: blue;
+.credits {
+  text-decoration: none;
+  color: blue;
 }
 
 /* Character Selector */
 
-.select-character{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    z-index: 3;
-    display: grid;
-    place-content: center;
+.select-character {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 3;
+  display: grid;
+  place-content: center;
 }
-.select-character>h1{
-    color: #ffff;
+.select-character > h1 {
+  color: #ffff;
 }
-#character-container{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+#character-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
-.character-box{
-    width: 120px;
-    height: 150px;
-    position: relative;
-    padding: 15px 10px;
-    border-radius: 25px;
-    background-color: #f1f1f1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: .5s;
+.character-box {
+  width: 120px;
+  height: 150px;
+  position: relative;
+  padding: 15px 10px;
+  border-radius: 25px;
+  background-color: #f1f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.5s;
 }
-.character-box:hover{
-    transform: scale(1.05);
-    border: solid 4px #1f81a1;
-    box-shadow: 0 0 10px #1f81a1;
+.character-box:hover {
+  transform: scale(1.05);
+  border: solid 4px #1f81a1;
+  box-shadow: 0 0 10px #1f81a1;
 }
-.character-box > img{
-    width: 95%;
+.character-box > img {
+  width: 95%;
 }
-.character-box>p{
-    position: absolute;
-    bottom: 3%;
-    display: none;
+.character-box > p {
+  position: absolute;
+  bottom: 3%;
+  display: none;
 }
