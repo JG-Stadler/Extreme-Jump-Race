@@ -45,7 +45,8 @@ body {
   left: 5%;
   bottom: 0;
 }
-#car,#player{
+#car,
+#player {
   height: 20%;
 }
 
