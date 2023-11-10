@@ -49,6 +49,25 @@ body {
 #player {
   height: 20%;
 }
+#gameOver {
+  font-size: 3rem;
+  color: blue;
+  animation: GameOver 1s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 1000;
+  display: none;
+}
+@keyframes GameOver {
+  from {
+    color: #1f81a1;
+  }
+  to {
+    color: red;
+  }
+}
 
 /* Menu */
 
