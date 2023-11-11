@@ -71,6 +71,10 @@ body {
 
 /* Menu */
 
+@font-face {
+  font-family: pusab;
+  src: url(../fonts/8-bit-pusab.ttf);
+}
 .game-name,
 .select-character > h1 {
   position: absolute;
@@ -78,6 +82,10 @@ body {
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
+}
+.game-name {
+  font-family: pusab, sans-serif;
+  color: #fff;
 }
 #main-menu {
   display: grid;
@@ -88,8 +96,11 @@ body {
   top: 0;
   left: 0;
   z-index: 4;
-  background-color: #f1f1f1;
   justify-items: center;
+  background: url(../images/background-menu.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 #start-game {
   background: none;
@@ -97,40 +108,51 @@ body {
   font-size: 2.5rem;
   text-transform: uppercase;
   cursor: pointer;
+  font-family: pusab, sans-serif;
+  color: #fff;
 }
 .credits {
   text-decoration: none;
-  color: blue;
+  color: #fff;
+  font-family: pusab, sans-serif;
 }
 
 /* Character Selector */
 
+@font-face {
+  font-family: bitanco;
+  src: url(../fonts/8-bitanco.ttf);
+}
 .select-character {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: black;
   z-index: 3;
   display: grid;
   place-content: center;
+  background: url(../images/background-select-player.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 .select-character > h1 {
   color: #ffff;
+  font-family: bitanco, sans-serif;
 }
-#character-container {
+#characters-container {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  gap: 15px;
 }
 .character-box {
-  width: 120px;
-  height: 150px;
+  width: 100px;
+  height: 120px;
   position: relative;
   padding: 15px 10px;
-  border-radius: 25px;
-  background-color: #f1f1f1;
+  border-radius: 10px;
+  background-color: #f1f1f183;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -139,8 +161,7 @@ body {
 }
 .character-box:hover {
   transform: scale(1.05);
-  border: solid 4px #1f81a1;
-  box-shadow: 0 0 10px #1f81a1;
+  background-color: #fff;
 }
 .character-box > img {
   width: 95%;
@@ -148,7 +169,7 @@ body {
 .character-box > p {
   position: absolute;
   bottom: 3%;
-  display: none;
+  color: black;
 }
 
 #jumpButton {
