@@ -1,6 +1,6 @@
 .playerJump {
   animation-name: Jump;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
   animation-timing-function: linear;
 }
 .cityActive,
@@ -17,7 +17,7 @@
   animation-delay: 5s;
 }
 .carActive {
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-delay: 3s;
 }
 

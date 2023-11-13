@@ -59,6 +59,8 @@ body {
   transform: translate(-50%, -50%);
   font-weight: 1000;
   display: none;
+  text-align: center;
+  z-index: 3;
 }
 @keyframes GameOver {
   from {
@@ -97,10 +99,10 @@ body {
   left: 0;
   z-index: 4;
   justify-items: center;
-  background: url(../images/background-menu.jpg);
-  background-size: cover;
+  background: url(../images/background1.gif);
   background-repeat: no-repeat;
   background-position: center center;
+  background-size: cover;
 }
 #start-game {
   background: none;
@@ -132,10 +134,10 @@ body {
   z-index: 3;
   display: grid;
   place-content: center;
-  background: url(../images/background-select-player.gif);
+  background: url(../images/background2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: left center;
 }
 .select-character > h1 {
   color: #ffff;

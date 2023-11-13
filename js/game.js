@@ -17,7 +17,7 @@ jumpButton.addEventListener("click", () => {
   activatedPlayer.classList.add("playerJump");
   setTimeout(() => {
     activatedPlayer.classList.remove("playerJump");
-  }, 1500);
+  }, 1000);
 });
 
 // Colision Verification
@@ -27,6 +27,7 @@ var LimitCarDistance = gameWindow.offsetHeight * 0.17;
 const minPlayerBottom = 100;
 const car = document.getElementById("car");
 
+var score = 0;
 function ColisionVerification() {
   setInterval(() => {
     const carDistance = car.offsetLeft;
@@ -42,8 +43,8 @@ function ColisionVerification() {
       carDistance > -200
     ) {
       GameOver(cloudsDistance, playerBottom, cityDistance, carDistance);
-    }
-  }, 5);
+
+  }}, 5);
 }
 
 // Stop Game
