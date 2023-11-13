@@ -70,5 +70,5 @@ function GameOver(
   car.style.left = `${carLeftDistance}px`;
   city.style.left = `${cityLeftDistance}px`;
   clouds.style.left = `${cloudsLeftDistance}px`;
-  gameOverMensage.style.display = "block";
+  gameOverMensage.style.display = "grid";
 }

@@ -22,7 +22,14 @@ body {
   max-width: 85vw;
   overflow: hidden;
   position: relative;
-  background-color: rgb(61, 177, 212);
+  background: linear-gradient(
+    to bottom,
+    #3d1c51,
+    #7e397c,
+    #8848b4,
+    #9c91cd,
+    #d7798b
+  );
   border: solid 2px black;
   border-bottom-width: 10px;
 }
@@ -54,13 +61,17 @@ body {
   color: blue;
   animation: GameOver 1s linear infinite;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  left: 0;
   font-weight: 1000;
-  display: none;
   text-align: center;
   z-index: 3;
+  background-color: rgba(0, 0, 0, 0.459);
+  width: 100%;
+  height: 100%;
+  place-content: center;
+  display: none;
+  text-transform: uppercase;
 }
 @keyframes GameOver {
   from {
@@ -77,7 +88,6 @@ body {
   font-family: pusab;
   src: url(../fonts/8-bit-pusab.ttf);
 }
-.game-name,
 .select-character > h1 {
   position: absolute;
   top: 10%;
@@ -88,8 +98,11 @@ body {
 .game-name {
   font-family: pusab, sans-serif;
   color: #fff;
+  margin-bottom: 30px;
+  text-shadow: 0 0 15px black;
 }
 #main-menu {
+  text-align: center;
   display: grid;
   place-content: center;
   width: 100%;
@@ -101,7 +114,7 @@ body {
   justify-items: center;
   background: url(../images/background1.gif);
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: left center;
   background-size: cover;
 }
 #start-game {
@@ -112,6 +125,12 @@ body {
   cursor: pointer;
   font-family: pusab, sans-serif;
   color: #fff;
+  transition: 0.5s;
+}
+#start-game:hover,
+.credits:hover {
+  color: #1f81a1;
+  text-shadow: 0 0 15px black;
 }
 .credits {
   text-decoration: none;
@@ -137,11 +156,12 @@ body {
   background: url(../images/background2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: left center;
+  background-position: bottom center;
 }
 .select-character > h1 {
   color: #ffff;
   font-family: bitanco, sans-serif;
+  font-size: 2rem;
 }
 #characters-container {
   display: flex;
