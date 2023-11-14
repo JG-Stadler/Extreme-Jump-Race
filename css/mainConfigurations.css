@@ -16,6 +16,10 @@ body {
 
 /* Game Window & Components*/
 
+@font-face {
+  font-family: pusab;
+  src: url(../fonts/8-bit-pusab.ttf);
+}
 .game-window {
   min-height: 500px;
   width: 800px;
@@ -75,6 +79,31 @@ body {
   place-content: center;
   display: none;
   text-transform: uppercase;
+  flex-direction: column;
+  align-items: center;
+}
+#gameOver>p{
+  font-family: pusab;
+}
+#restart{
+  padding: 10px 20px;
+  border: solid 1.5px #fff;
+  border-radius: 10px;
+  font-size: medium;
+  margin-top: 20px;
+  width: fit-content;
+  color: #ffff;
+  background-color: #fd3232;
+  cursor: pointer;
+  transition: .5s;
+  text-transform: uppercase;
+  font-family: pusab;
+}
+#restart:hover{
+  transform: scale(1.1);
+  color: red;
+  background-color: #fff;
+  border: solid 2px #fd3232;
 }
 @keyframes GameOver {
   from {
@@ -87,10 +116,6 @@ body {
 
 /* Menu */
 
-@font-face {
-  font-family: pusab;
-  src: url(../fonts/8-bit-pusab.ttf);
-}
 .select-character > h1 {
   position: absolute;
   top: 10%;
