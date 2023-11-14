@@ -9,10 +9,10 @@
   },  
   {
     "id": 1,
-    "name": "Test Robot",
-    "frameRun1": "images/pixil-frame-1.png",
-    "frameRun2": "images/pixil-frame-2.png",
-    "frameRun3": "images/pixil-frame-3.png",
-    "frameJump": "images/frame-spiderman-jumping.png"
+    "name": "Jet Sprinter",
+    "frameRun1": "images/jetsprinter-frame-0.png",
+    "frameRun2": "images/jetsprinter-frame-1.png",
+    "frameRun3": "images/jetsprinter-frame-2.png",
+    "frameJump": "images/jetsprinter-frame-jump.png"
   }
 ]

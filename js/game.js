@@ -1,4 +1,3 @@
-const jumpButton = document.getElementById("jumpButton");
 const activatedPlayer = document.getElementById("player");
 
 function startGame() {
@@ -12,20 +11,25 @@ function startGame() {
 
   ColisionVerification();
 }
+// Jump
 
-jumpButton.addEventListener("click", () => {
+const jumpButton = document.getElementById("jumpButton");
+jumpButton.addEventListener("click", () => Jump());
+document.addEventListener("keydown", () => Jump());
+
+function Jump() {
   activatedPlayer.classList.add("playerJump");
+  // player.src = Character;
   setTimeout(() => {
     activatedPlayer.classList.remove("playerJump");
   }, 1000);
-});
-
+}
 // Colision Verification
 
 const gameWindow = document.getElementById("game-window");
 var LimitCarDistance = gameWindow.offsetHeight * 0.17;
-const minPlayerBottom = 100;
 const car = document.getElementById("car");
+const minPlayerBottom = car.clientHeight;
 
 var score = 0;
 function ColisionVerification() {
@@ -43,8 +47,8 @@ function ColisionVerification() {
       carDistance > -200
     ) {
       GameOver(cloudsDistance, playerBottom, cityDistance, carDistance);
-
-  }}, 5);
+    }
+  }, 5);
 }
 
 // Stop Game
