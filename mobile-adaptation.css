@@ -1,0 +1,19 @@
+#game-window{
+    width: 100vw;
+    max-width: none;
+    height: 100vh;
+    padding: 0;
+    border: none;
+}
+.game-name{
+    font-size: x-large;
+}
+#gameOver p{
+    font-size: x-large;
+}
+#restart{
+    font-size: 1rem;
+}
+#car{
+    animation-duration: 1s;
+}

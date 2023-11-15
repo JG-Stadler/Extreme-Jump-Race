@@ -27,14 +27,17 @@ function Jump() {
 // Colision Verification
 
 const gameWindow = document.getElementById("game-window");
-const LimitCarDistance = activatedPlayer.offsetLeft+activatedPlayer.clientHeight;
+const LimitCarDistance =
+  activatedPlayer.offsetLeft + activatedPlayer.clientHeight;
 const car = document.getElementById("car");
 const minPlayerBottom = car.clientHeight;
 
 function ColisionVerification() {
   setInterval(() => {
     const carDistance = car.offsetLeft;
-    const playerBottom = +window.getComputedStyle(player).bottom.replace("px", " ");
+    const playerBottom = +window
+      .getComputedStyle(player)
+      .bottom.replace("px", " ");
     const cloudsDistance = document.getElementById("clouds").offsetLeft;
     const cityDistance = document.getElementById("city").offsetLeft;
 
@@ -78,20 +81,19 @@ function GameOver(
 
 // Restart
 
-function Restart(gameOverDiv){
+function Restart(gameOverDiv) {
+  const restartButton = document.getElementById("restart");
 
-const restartButton = document.getElementById("restart");
+  restartButton.addEventListener("click", () => {
+    player.style.bottom = 0;
+    car.style.left = "100%";
+    city.style.left = "100%";
+    clouds.style.left = "100%";
 
-restartButton.addEventListener("click",()=>{
-  player.style.bottom = 0;
-  car.style.left = "100%";
-  city.style.left = "100%";
-  clouds.style.left = "100%";
+    city.classList = "cityActive";
+    car.classList = "carActive";
+    clouds.classList = "cloudsActive";
 
-  city.classList = "cityActive";
-  car.classList = "carActive";
-  clouds.classList = "cloudsActive";
-
-  gameOverDiv.style.display = "none";
-});
+    gameOverDiv.style.display = "none";
+  });
 }
