@@ -5,21 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/mainConfigurations.css" />
     <link rel="stylesheet" href="css/animations.css" />
-    <link rel="stylesheet" 
-    media="(max-width : 750px)" href="mobile-adaptation.css">
+    <link
+      rel="stylesheet"
+      media="(max-width : 750px)"
+      href="mobile-adaptation.css"
+    />
 
     <script src="js/getCaracters.js" defer></script>
     <script src="js/characterAnimation.js" defer></script>
     <script src="js/game.js" defer></script>
+    <!-- <script src="js/responsive-config" defer></script> -->
 
     <title>Extreme Jump Game</title>
   </head>
-  <body>
+  <body onload="HideLoader()">
+    <div id="loader-container">
+      <div class="custom-loader"></div>
+      <div id="change-orientation">
+        Vire a tela de seu telefone para melhor experiencia
+      </div>
+    </div>
+
     <main class="game-window" id="game-window">
       <div id="gameOver">
-      <p>Game Over</p>
-      <button id="restart">Reiniciar</button>
-    </div>
+        <p>Game Over</p>
+        <button id="restart">Reiniciar</button>
+      </div>
       <button id="jumpButton">
         <img src="images/jump-button.jpg" alt="jump-button" />
       </button>

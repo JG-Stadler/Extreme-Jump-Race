@@ -1,4 +1,5 @@
 const activatedPlayer = document.getElementById("player");
+const body = document.querySelector("body");
 
 function startGame() {
   const city = document.getElementById("city");
@@ -96,4 +97,19 @@ function Restart(gameOverDiv) {
 
     gameOverDiv.style.display = "none";
   });
+}
+
+// Loader
+
+const orientationMensage = document.getElementById("change-orientation");
+if (body.clientWidth > 800) {
+  orientationMensage.style.display = "none";
+}
+
+function HideLoader() {
+  const loader = document.getElementById("loader-container");
+
+  setTimeout(() => {
+    loader.style.display = "none";
+  }, 3000);
 }

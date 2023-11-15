@@ -46,7 +46,7 @@ body {
   bottom: 0;
   left: 100%;
 }
-#city{
+#city {
   height: 100%;
 }
 #clouds {
@@ -82,10 +82,10 @@ body {
   flex-direction: column;
   align-items: center;
 }
-#gameOver>p{
+#gameOver > p {
   font-family: pusab;
 }
-#restart{
+#restart {
   padding: 10px 20px;
   border: solid 1.5px #fff;
   border-radius: 10px;
@@ -95,11 +95,11 @@ body {
   color: #ffff;
   background-color: #fd3232;
   cursor: pointer;
-  transition: .5s;
+  transition: 0.5s;
   text-transform: uppercase;
   font-family: pusab;
 }
-#restart:hover{
+#restart:hover {
   transform: scale(1.1);
   color: red;
   background-color: #fff;
@@ -244,4 +244,46 @@ body {
   object-fit: contain;
   width: 90%;
   opacity: 50%;
+}
+
+/* Loader */
+
+.custom-loader {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding: 1px;
+  background: conic-gradient(#0000 10%, #766df4) content-box;
+  -webkit-mask: repeating-conic-gradient(
+      #0000 0deg,
+      #000 1deg 20deg,
+      #0000 21deg 36deg
+    ),
+    radial-gradient(
+      farthest-side,
+      #0000 calc(100% - 9px),
+      #000 calc(100% - 8px)
+    );
+  -webkit-mask-composite: destination-in;
+  mask-composite: intersect;
+  animation: s4 1s infinite steps(10);
+}
+@keyframes s4 {
+  to {
+    transform: rotate(1turn);
+  }
+}
+#loader-container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-content: center;
+  background-color: #fff;
+  z-index: 5;
+  justify-items: center;
+  font-weight: 1000;
+  text-align: center;
 }
