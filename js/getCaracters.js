@@ -8,8 +8,8 @@ startButton.addEventListener("click", () => {
   fetchCharacters();
 });
 
-function fetchCharacters() {
-  fetch("../characters.json")
+async function fetchCharacters() {
+  await fetch("../characters.json")
     .then((res) => res.json())
     .then((data) => loadCharacters(data));
 }
