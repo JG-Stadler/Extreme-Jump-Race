@@ -23,7 +23,7 @@ document.addEventListener("keydown", () => Jump());
 
 function Jump() {
   activatedPlayer.classList.add("playerJump");
-  // player.src = Character;
+  activatedPlayer.src = "images/jetsprinter-frame-jump.png"
   setTimeout(() => {
     activatedPlayer.classList.remove("playerJump");
   }, 1000);

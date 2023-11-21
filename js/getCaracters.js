@@ -41,6 +41,6 @@ function newCharacter(id) {
     .then((data) => {
       let selectedCharacter = new Object();
       selectedCharacter = data[id];
-      playerAnimation(selectedCharacter);
+
     });
 }
