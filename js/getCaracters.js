@@ -1,12 +1,12 @@
 const startButton = document.getElementById("start-game");
-const mainMenu = document.getElementById("main-menu");
+// const mainMenu = document.getElementById("main-menu");
 const charactersContainer = document.getElementById("characters-container");
 const selectCharacterMenu = document.getElementById("select-character");
 
-startButton.addEventListener("click", () => {
-  mainMenu.style.display = "none";
-  fetchCharacters();
-});
+// startButton.addEventListener("click", () => {
+//   mainMenu.style.display = "none";
+//   fetchCharacters();
+// });
 
 async function fetchCharacters() {
   await fetch("../characters.json")

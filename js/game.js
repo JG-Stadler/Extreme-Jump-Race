@@ -1,7 +1,9 @@
 const activatedPlayer = document.getElementById("player");
 const body = document.querySelector("body");
+const mainMenu = document.getElementById("main-menu");
 
 function startGame() {
+  mainMenu.style.display = "none";
   const city = document.getElementById("city");
   const car = document.getElementById("car");
   const clouds = document.getElementById("clouds");
@@ -10,6 +12,7 @@ function startGame() {
   car.classList.add("carActive");
   clouds.classList.add("cloudsActive");
 
+  playerAnimation();
   ColisionVerification();
 }
 // Jump
@@ -52,53 +55,6 @@ function ColisionVerification() {
   }, 5);
 }
 
-// Stop Game
-
-function GameOver(
-  cloudsLeftDistance,
-  playerHeight,
-  cityLeftDistance,
-  carLeftDistance
-) {
-  const clouds = document.getElementById("clouds");
-  const player = document.getElementById("player");
-  const car = document.getElementById("car");
-  const city = document.getElementById("city");
-  const gameOverMensage = document.getElementById("gameOver");
-
-  city.classList.remove("cityActive");
-  car.classList.remove("carActive");
-  clouds.classList.remove("cloudsActive");
-  player.classList.remove("playerJump");
-
-  player.style.bottom = `${playerHeight}px`;
-  car.style.left = `${carLeftDistance}px`;
-  city.style.left = `${cityLeftDistance}px`;
-  clouds.style.left = `${cloudsLeftDistance}px`;
-  gameOverMensage.style.display = "flex";
-
-  Restart(gameOverMensage);
-}
-
-// Restart
-
-function Restart(gameOverDiv) {
-  const restartButton = document.getElementById("restart");
-
-  restartButton.addEventListener("click", () => {
-    player.style.bottom = 0;
-    car.style.left = "100%";
-    city.style.left = "100%";
-    clouds.style.left = "100%";
-
-    city.classList = "cityActive";
-    car.classList = "carActive";
-    clouds.classList = "cloudsActive";
-
-    gameOverDiv.style.display = "none";
-  });
-}
-
 // Loader
 
 const orientationMensage = document.getElementById("change-orientation");
@@ -111,5 +67,5 @@ function HideLoader() {
 
   setTimeout(() => {
     loader.style.display = "none";
-  }, 3000);
+  }, 500);
 }

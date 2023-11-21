@@ -1,14 +1,15 @@
 const player = document.getElementById("player");
 let i = 0;
 
-function playerAnimation(Character) {
+function playerAnimation() {
   setInterval(() => {
-    changeFrame(Character);
+    changeFrame();
   }, 300);
 }
 
-function changeFrame(obj) {
-  const frames = [obj.frameRun1, obj.frameRun2, obj.frameRun3, obj.frameRun2];
+function changeFrame() {
+  // const frames = [obj.frameRun1, obj.frameRun2, obj.frameRun3, obj.frameRun2];
+  const frames = ["images/jetsprinter-frame-0.png","images/jetsprinter-frame-1.png","images/jetsprinter-frame-2.png","images/jetsprinter-frame-1.png"];
   player.src = frames[i];
   i = i + 1;
   if (i > 3) {
