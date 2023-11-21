@@ -31,7 +31,7 @@ const gameWindow = document.getElementById("game-window");
 const LimitCarDistance =
   activatedPlayer.offsetLeft + activatedPlayer.clientHeight;
 const car = document.getElementById("car");
-const minPlayerBottom = car.clientHeight;
+const minPlayerBottom = car.clientHeight - 20;
 
 function ColisionVerification() {
   setInterval(() => {
