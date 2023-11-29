@@ -105,6 +105,28 @@ body {
   background-color: #fff;
   border: solid 2px #fd3232;
 }
+#jumpButton {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  border-radius: 50%;
+  background-color: rgb(182, 181, 181);
+  border: solid black;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 3;
+  cursor: pointer;
+  opacity: 60%;
+}
+#jumpButton > img {
+  object-fit: contain;
+  height: 90%;
+}
+
 @keyframes GameOver {
   from {
     color: #1f81a1;
@@ -164,86 +186,6 @@ body {
   text-decoration: none;
   color: #fff;
   font-family: pusab, sans-serif;
-}
-
-/* Character Selector */
-
-@font-face {
-  font-family: bitanco;
-  src: url(../fonts/8-bitanco.ttf);
-}
-.select-character {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 3;
-  display: grid;
-  place-content: center;
-  background: url(../images/background2.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: bottom center;
-}
-.select-character > h1 {
-  color: #ffff;
-  font-family: bitanco, sans-serif;
-  font-size: 2rem;
-}
-#characters-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 15px;
-}
-.character-box {
-  width: 100px;
-  height: 120px;
-  position: relative;
-  padding: 15px 10px;
-  border-radius: 10px;
-  background-color: #f1f1f183;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: 0.5s;
-}
-.character-box:hover {
-  transform: scale(1.05);
-  background-color: #fff;
-}
-.character-box > img {
-  width: 95%;
-}
-.character-box > p {
-  position: absolute;
-  bottom: 3%;
-  color: black;
-}
-
-#jumpButton {
-  position: absolute;
-  bottom: 5%;
-  right: 5%;
-  border-radius: 50%;
-  background-color: rgb(182, 181, 181);
-  border: solid black;
-  width: 100px;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  z-index: 3;
-  cursor: pointer;
-  opacity: 60%;
-}
-#jumpButton > img {
-  object-fit: contain;
-  width: 90%;
-  opacity: 50%;
 }
 
 /* Loader */
