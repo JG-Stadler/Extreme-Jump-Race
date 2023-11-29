@@ -12,7 +12,6 @@ function startGame() {
   car.classList.add("carActive");
   clouds.classList.add("cloudsActive");
 
-  playerAnimation();
   ColisionVerification();
   playerAnimation();
 }
