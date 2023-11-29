@@ -11,6 +11,7 @@ function startGame() {
   clouds.classList.add("cloudsActive");
 
   ColisionVerification();
+  playerAnimation();
 }
 // Jump
 
