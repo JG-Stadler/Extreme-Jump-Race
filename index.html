@@ -3,15 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/mobile-adaptation.css"/>
     <link rel="stylesheet" href="css/mainConfigurations.css" />
     <link rel="stylesheet" href="css/animations.css" />
-    <link rel="stylesheet" href="csss/mobile-adaptation.css"/>
 
     <script src="js/characterAnimation.js" defer></script>
     <script src="js/game.js" defer></script>
     <script src="js/gameOver.js" defer></script>
 
-    <title>Extreme Jump Game</title>
+    <title>Extreme Jump Race</title>
   </head>
   <body onload="HideLoader()">
     <div id="loader-container">
@@ -34,7 +34,7 @@
         <h1 class="game-name">Extreme Jump Race</h1>
         <button id="start-game"
         onclick="startGame()">Jogar</button>
-        <a href="creditos.html" class="credits">Creditos</a>
+        <a href="#" class="credits" onclick="AlertCredits()">Creditos</a>
       </div>
 
       <img src="images/nuvens.webp" alt="" id="clouds" />
@@ -42,5 +42,10 @@
       <img src="images/car.png" alt="" id="car" />
       <img src="" alt="" id="player" />
     </main>
+    <script>
+      function AlertCredits(){
+        window.alert("pagina em desenvolvimento")
+      }
+    </script>
   </body>
 </html>

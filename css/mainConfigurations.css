@@ -21,9 +21,10 @@ body {
   src: url(../fonts/8-bit-pusab.ttf);
 }
 .game-window {
+  max-width: 100vw;
+  max-height: 100vh;
   min-height: 500px;
   width: 800px;
-  max-width: 85vw;
   overflow: hidden;
   position: relative;
   background: linear-gradient(
@@ -55,14 +56,17 @@ body {
   left: 100%;
 }
 #player {
-  height: 100px;
+  width: 22%;
   left: 5%;
   bottom: 0;
 }
-#car,
+#car{
+  width: 50%;
+}
+/* #car,
 #player {
   height: 20%;
-}
+} */
 #gameOver {
   font-size: 3rem;
   color: blue;
@@ -138,13 +142,6 @@ body {
 
 /* Menu */
 
-.select-character > h1 {
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-}
 .game-name {
   font-family: pusab, sans-serif;
   color: #fff;
@@ -228,4 +225,9 @@ body {
   justify-items: center;
   font-weight: 1000;
   text-align: center;
+}
+@media(min-width:600px) {
+#player,#car{
+  height: 20%;
+}
 }
