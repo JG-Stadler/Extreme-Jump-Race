@@ -33,7 +33,6 @@ function Jump() {
 const gameWindow = document.getElementById("game-window");
 const LimitCarDistance =
   activatedPlayer.offsetLeft + activatedPlayer.clientWidth - 20;
-  console.log( LimitCarDistance)
 const car = document.getElementById("car");
 const minPlayerBottom = car.clientHeight - 20;
 

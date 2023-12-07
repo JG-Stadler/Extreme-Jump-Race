@@ -118,6 +118,8 @@ body {
   border: solid black;
   width: 100px;
   height: 100px;
+  max-width: 20vh;
+  max-height:20vh;
   display: flex;
   align-items: center;
   justify-content: center;
