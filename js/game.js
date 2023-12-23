@@ -31,26 +31,26 @@ function Jump() {
 // Colision Verification
 
 const gameWindow = document.getElementById("game-window");
-const LimitCarDistance =
-  activatedPlayer.offsetLeft + activatedPlayer.clientWidth - 20;
+const LimitCarDistance = activatedPlayer.offsetLeft + activatedPlayer.clientWidth;
 const car = document.getElementById("car");
 const minPlayerBottom = car.clientHeight - 20;
 
 function ColisionVerification() {
   setInterval(() => {
     const carDistance = car.offsetLeft;
-    const playerBottom = +window
+    const playerHeigthJump = +window
       .getComputedStyle(player)
       .bottom.replace("px", " ");
+
     const cloudsDistance = document.getElementById("clouds").offsetLeft;
     const cityDistance = document.getElementById("city").offsetLeft;
 
     if (
-      playerBottom < minPlayerBottom &&
+      playerHeigthJump < minPlayerBottom &&
       carDistance <= LimitCarDistance &&
       carDistance > -200
     ) {
-      GameOver(cloudsDistance, playerBottom, cityDistance, carDistance);
+      GameOver(cloudsDistance, playerHeigthJump, cityDistance, carDistance);
     }
   }, 5);
 }

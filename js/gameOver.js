@@ -24,6 +24,7 @@ function GameOver(
     gameOverMensage.style.display = "flex";
   
     Restart(gameOverMensage);
+
   }
   
   // Restart

@@ -56,17 +56,13 @@ body {
   left: 100%;
 }
 #player {
-  width: 22%;
+  width: 15%;
   left: 5%;
   bottom: 0;
 }
 #car{
-  width: 50%;
+  width: 40%;
 }
-/* #car,
-#player {
-  height: 20%;
-} */
 #gameOver {
   font-size: 3rem;
   color: blue;
@@ -228,8 +224,8 @@ body {
   font-weight: 1000;
   text-align: center;
 }
-@media(min-width:600px) {
+/* @media(min-width:600px) {
 #player,#car{
   height: 20%;
 }
-}
+} */

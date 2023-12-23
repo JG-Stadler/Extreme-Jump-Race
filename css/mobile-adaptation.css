@@ -15,9 +15,6 @@
   #restart {
     font-size: 1rem;
   }
-  #car {
-    animation-duration: 1s;
-  }
 }
 @media (max-height: 550px) {
   .game-window {
