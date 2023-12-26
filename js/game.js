@@ -14,11 +14,15 @@ function startGame() {
 
   ColisionVerification();
   playerAnimation;
+  PlayMusic();
 }
 // Jump
 
 const jumpButton = document.getElementById("jumpButton");
-jumpButton.addEventListener("click", () => Jump());
+jumpButton.addEventListener("click", () =>{
+  PlayJumpSound();
+  Jump();
+} );
 document.addEventListener("keydown", () => Jump());
 
 function Jump() {
@@ -51,6 +55,7 @@ function ColisionVerification() {
       carDistance > -200
     ) {
       GameOver(cloudsDistance, playerHeigthJump, cityDistance, carDistance);
+      PauseGameMusic();
     }
   }, 5);
 }
@@ -68,4 +73,22 @@ function HideLoader() {
   setTimeout(() => {
     loader.style.display = "none";
   }, 500);
+}
+
+// Game Music / Sound effects
+
+const GameMusic = document.getElementById("game-music");
+GameMusic.volume = 0.2;
+const JumpSoundEffect = document.getElementById("jump-sound-effect");
+JumpSoundEffect.volume = 10;
+
+function PlayMusic(){
+  GameMusic.play()
+}
+
+function PlayJumpSound(){
+  JumpSoundEffect.play()
+}
+function PauseGameMusic(){
+  GameMusic.pause();
 }

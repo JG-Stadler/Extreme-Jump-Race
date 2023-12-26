@@ -12,7 +12,6 @@
     <script src="js/characterAnimation.js" defer></script>
     <script src="js/game.js" defer></script>
     <script src="js/gameOver.js" defer></script>
-    <script src="js/speed-setings.js" defer></script>
 
     <title>Extreme Jump Race</title>
   </head>
@@ -63,10 +62,15 @@
       <img src="" alt="" id="player" />
     </main>
 
-    <!-- Game Music -->
+    <!-- Game Music / Sound effects -->
 
-    <audio src="audio/And the Journey Begins_(MP3_160K).mp3"
-    autoplay loop style="display: none;"></audio>
+    <audio id="game-music" 
+    src="audio/And the Journey Begins_(MP3_160K).mp3"
+    loop style="display: none;"></audio>
+
+    <audio id="jump-sound-effect"
+    src="audio/Retro 8 bit Jump Sound Effect for FREE__ iggchan(MP3_160K).mp3"
+     style="display: none;"></audio>
 
     <!-- Temporary Script / Script temporário -->
     <!-- Script destinado ao aviso sobre o desenvolvimento da pagina de créditos -->

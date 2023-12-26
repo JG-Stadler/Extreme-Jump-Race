@@ -24,7 +24,6 @@ function GameOver(
     gameOverMessage.style.display = "flex";
   
     Restart(gameOverMessage);
-
   }
   
   // Restart
@@ -33,6 +32,7 @@ function GameOver(
     const restartButton = document.getElementById("restart");
   
     restartButton.addEventListener("click", () => {
+      PlayMusic();
       player.style.bottom = 0;
       car.style.left = "100%";
       city.style.left = "100%";
