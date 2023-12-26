@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="css/mainConfigurations.css" />
     <link rel="stylesheet" href="css/animations.css" />
 
+    <!-- scripts -->
+
     <script src="js/characterAnimation.js" defer></script>
     <script src="js/game.js" defer></script>
     <script src="js/gameOver.js" defer></script>
@@ -14,22 +16,37 @@
 
     <title>Extreme Jump Race</title>
   </head>
+
+
   <body onload="HideLoader()">
+
+    <!-- Loader / Carregador -->
     <div id="loader-container">
       <div class="custom-loader"></div>
+
+     <!-- Screen Orientation alert / Alerta de Orientação da tela  -->
       <div id="change-orientation">
         Vire a tela de seu telefone para melhor experiencia
       </div>
     </div>
 
+    <!-- Game window / Janela do Jogo -->
+
     <main class="game-window" id="game-window">
+
+      <!-- Game Over Screen / Tela de Game Over -->
       <div id="gameOver">
         <p>Game Over</p>
         <button id="restart">Reiniciar</button>
       </div>
+
+      <!-- Jump Button / Botão de Pulo -->
+
       <button id="jumpButton">
         <img src="images/jump-button.png" alt="jump-button" />
       </button>
+
+      <!-- Main Menu / Menu principal -->
 
       <div id="main-menu">
         <h1 class="game-name">Extreme Jump Race</h1>
@@ -38,14 +55,24 @@
         <a href="#" class="credits" onclick="AlertCredits()">Creditos</a>
       </div>
 
+      <!-- Game Components / Componentes do Jogo -->
+ 
       <img src="images/nuvens.webp" alt="" id="clouds" />
       <img src="images/city.png" alt="" id="city" />
       <img src="images/car-3.png" alt="" id="car" />
       <img src="" alt="" id="player" />
     </main>
+
+    <!-- Game Music -->
+
+    <audio src="audio/And the Journey Begins_(MP3_160K).mp3"
+    autoplay loop style="display: none;"></audio>
+
+    <!-- Temporary Script / Script temporário -->
+    <!-- Script destinado ao aviso sobre o desenvolvimento da pagina de créditos -->
     <script>
       function AlertCredits(){
-        window.alert("pagina em desenvolvimento")
+        window.alert("Disponivel em breve")
       }
     </script>
   </body>

@@ -10,7 +10,7 @@ function GameOver(
     const player = document.getElementById("player");
     const car = document.getElementById("car");
     const city = document.getElementById("city");
-    const gameOverMensage = document.getElementById("gameOver");
+    const gameOverMessage = document.getElementById("gameOver");
   
     city.classList.remove("cityActive");
     car.classList.remove("carActive");
@@ -21,9 +21,9 @@ function GameOver(
     car.style.left = `${carLeftDistance}px`;
     city.style.left = `${cityLeftDistance}px`;
     clouds.style.left = `${cloudsLeftDistance}px`;
-    gameOverMensage.style.display = "flex";
+    gameOverMessage.style.display = "flex";
   
-    Restart(gameOverMensage);
+    Restart(gameOverMessage);
 
   }
   

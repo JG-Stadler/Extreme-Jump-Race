@@ -38,6 +38,8 @@ body {
   border: solid 2px black;
   border-bottom-width: 10px;
 }
+
+/* Game components style*/
 .game-window img {
   position: absolute;
   object-fit: contain;
@@ -62,6 +64,17 @@ body {
 }
 #car{
   width: 40%;
+}
+
+/* Game Over Message */
+
+@keyframes GameOver {
+  from {
+    color: #1f81a1;
+  }
+  to {
+    color: red;
+  }
 }
 #gameOver {
   font-size: 3rem;
@@ -105,6 +118,9 @@ body {
   background-color: #fff;
   border: solid 2px #fd3232;
 }
+
+/* Action Buttons */
+
 #jumpButton {
   position: absolute;
   bottom: 5%;
@@ -127,15 +143,6 @@ body {
 #jumpButton > img {
   object-fit: contain;
   height: 90%;
-}
-
-@keyframes GameOver {
-  from {
-    color: #1f81a1;
-  }
-  to {
-    color: red;
-  }
 }
 
 /* Menu */
@@ -224,8 +231,3 @@ body {
   font-weight: 1000;
   text-align: center;
 }
-/* @media(min-width:600px) {
-#player,#car{
-  height: 20%;
-}
-} */
