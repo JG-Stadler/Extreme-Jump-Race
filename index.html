@@ -7,21 +7,15 @@
     <link rel="stylesheet" href="css/mainConfigurations.css" />
     <link rel="stylesheet" href="css/animations.css" />
 
-    <!-- scripts -->
-
-    <script src="js/characterAnimation.js" defer></script>
-    <script src="js/game.js" defer></script>
-    <script src="js/gameOver.js" defer></script>
-
     <title>Extreme Jump Race</title>
   </head>
 
-
-  <body onload="HideLoader()">
+<!-- onload="HideLoader()" -->
+  <body >
 
     <!-- Loader / Carregador -->
-    <div id="loader-container">
-      <div class="custom-loader"></div>
+    <!-- <div id="loader-container">
+      <div class="custom-loader"></div> -->
 
      <!-- Screen Orientation alert / Alerta de Orientação da tela  -->
       <div id="change-orientation">
@@ -49,8 +43,7 @@
 
       <div id="main-menu">
         <h1 class="game-name">Extreme Jump Race</h1>
-        <button id="start-game"
-        onclick="startGame()">Jogar</button>
+        <button id="start-game">Jogar</button>
         <a href="#" class="credits" onclick="AlertCredits()">Creditos</a>
       </div>
 
@@ -59,7 +52,7 @@
       <img src="images/nuvens.webp" alt="" id="clouds" />
       <img src="images/city.png" alt="" id="city" />
       <img src="images/car-3.png" alt="" id="car" />
-      <img src="" alt="" id="player" />
+      <img src="images/player-runing.gif" alt="player" id="player" />
     </main>
 
     <!-- Game Music / Sound effects -->
@@ -79,5 +72,9 @@
         window.alert("Disponivel em breve")
       }
     </script>
+
+        <!-- scripts -->
+
+        <script src="js/start_game.js"></script>
   </body>
 </html>
