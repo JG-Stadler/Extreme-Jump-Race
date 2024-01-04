@@ -18,3 +18,9 @@ function RemoveClasses(){
     car.classList.remove("carActive")
     player.classList.remove("playerJump");
 }
+
+// Restart game
+
+restartButton.addEventListener("click",()=>{
+    location.reload();
+});

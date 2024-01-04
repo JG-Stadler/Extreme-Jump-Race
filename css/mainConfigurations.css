@@ -12,6 +12,7 @@ html {
 body {
   display: grid;
   place-content: center;
+  background-color: rgb(110, 110, 110);
 }
 
 /* Game Window & Components*/
@@ -21,6 +22,7 @@ body {
   src: url(../fonts/8-bit-pusab.ttf);
 }
 .game-window {
+  position: relative;
   max-width: 100vw;
   max-height: 100vh;
   min-height: 500px;

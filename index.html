@@ -10,17 +10,11 @@
     <title>Extreme Jump Race</title>
   </head>
 
-<!-- onload="HideLoader()" -->
-  <body >
+  <body onload="HideLoader()">
 
     <!-- Loader / Carregador -->
-    <!-- <div id="loader-container">
-      <div class="custom-loader"></div> -->
-
-     <!-- Screen Orientation alert / Alerta de Orientação da tela  -->
-      <div id="change-orientation">
-        Vire a tela de seu telefone para melhor experiencia
-      </div>
+    <div id="loader-container">
+      <div class="custom-loader"></div>
     </div>
 
     <!-- Game window / Janela do Jogo -->
@@ -55,6 +49,10 @@
       <img src="images/player-runing.gif" alt="player" id="player" />
     </main>
 
+    <p id="notice-screen-orientation"
+    style="color: rgb(189, 189, 189);">
+    Mantenha seu aparelho na horizontal para melhor experiencia</p>
+
     <!-- Game Music / Sound effects -->
 
     <audio id="game-music" 
@@ -78,5 +76,20 @@
         <script src="js/start_game.js"></script>
         <script src="js/game.js"></script>
         <script src="js/gameOver.js"></script>
+
+        <script>
+          function HideLoader(){
+            const Loader = document.getElementById("loader-container");
+            Loader.style.display = "none";
+          }
+        </script>
+
+        <script>
+          const NoticeOrientation = document.getElementById("notice-screen-orientation");
+          const body = document.querySelector("body");
+          if(body.clientWidth > 800){
+            NoticeOrientation.style.display = "none";
+          }
+        </script>
   </body>
 </html>
