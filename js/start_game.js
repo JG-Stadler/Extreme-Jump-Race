@@ -13,6 +13,7 @@ const startGame_Button = document.getElementById("start-game");
 startGame_Button.addEventListener("click",()=>{
     menu.style.display = "none";
     StartGame();
+    PlayGameMusic();
 })
 
 // start Animations

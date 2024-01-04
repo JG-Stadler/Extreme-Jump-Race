@@ -2,8 +2,12 @@ const gameOverScreen = document.getElementById('gameOver');
 const restartButton = document.getElementById('restart');
 
 function GameOver(playerJumpHeight,carDistance,cityDistance,cloudsDistance){
-    player.src = "images/explosion.png";
+    clearInterval(ColisionVerivication);
+    PauseGameMusic();
+    PlayGameOverMusic();
     RemoveClasses();
+    PlayExplosionSound();
+    player.src = "images/explosion.png";
     gameOverScreen.style.display = "flex";
 
     player.style.bottom = `${playerJumpHeight}px`;

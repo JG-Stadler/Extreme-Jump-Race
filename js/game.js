@@ -4,6 +4,7 @@ const GameWindow = document.getElementById("game-window")
 const JumpButton = document.getElementById("jumpButton");
 
 JumpButton.addEventListener("click",()=>{
+    PlayJumpSound();
     player.classList.add("playerJump");
     player.src = "images/jetsprinter-frame-jump.png"
     setTimeout(()=>{
