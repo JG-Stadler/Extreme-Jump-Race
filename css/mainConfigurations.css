@@ -186,10 +186,11 @@ body {
   color: #1f81a1;
   text-shadow: 0 0 15px black;
 }
-.credits {
+#main-menu>a{
   text-decoration: none;
   color: #fff;
   font-family: pusab, sans-serif;
+  margin: 15px 0;
 }
 
 /* Loader */

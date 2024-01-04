@@ -1,7 +1,4 @@
 @media (max-width: 900px) {
-  /* body {
-    background-color: black;
-  } */
   body>.game-window{
     border:none;
     /* object-fit: contain; */
@@ -14,10 +11,5 @@
   }
   #restart {
     font-size: 1rem;
-  }
-}
-@media (max-height: 550px) {
-  .game-window {
-    height: 100vh;
   }
 }
