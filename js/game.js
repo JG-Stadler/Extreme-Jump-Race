@@ -20,14 +20,21 @@ let player_jump_height;
 let car_right_distance;
 let car_outside_the_player_line = GameWindow.clientWidth - player.offsetLeft;
 
+let clouds_distance;
+let city_distance;
+
+
 const ColisionVerivication = window.setInterval(()=>{
     carDistance = car.offsetLeft;
     car_right_distance = window.getComputedStyle(car).right.replace("px","");
     player_jump_height = window.getComputedStyle(player).bottom.replace("px","");
 
+    clouds_distance = clouds.offsetLeft
+    city_distance = city.offsetLeft;
+
     if(carDistance <= car_limit_distance
-        && car_right_distance >= car_outside_the_player_line
-        && player_jump_height <= car.clientHeight){
-        console.log("perdeu")
+        && car_right_distance <= car_outside_the_player_line
+        && player_jump_height <= car.clientHeight - car.clientHeight*0.2){
+        GameOver(player_jump_height,carDistance,)
     }
 },100);
