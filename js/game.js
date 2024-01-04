@@ -1,5 +1,5 @@
 const GameWindow = document.getElementById("game-window")
-
+// const jetsprinter = document.getElementById("player");
 
 const JumpButton = document.getElementById("jumpButton");
 
@@ -9,7 +9,9 @@ JumpButton.addEventListener("click",()=>{
     player.src = "images/jetsprinter-frame-jump.png"
     setTimeout(()=>{
     player.classList.remove("playerJump");
-    player.src = "images/player-runing.gif";
+    if(player_jump_height = 0){
+        player.src = "images/player-runing.gif"
+    }
     },1000);
 });
 
