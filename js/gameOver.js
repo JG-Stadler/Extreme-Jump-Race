@@ -1,12 +1,15 @@
 const gameOverScreen = document.getElementById('gameOver');
 const restartButton = document.getElementById('restart');
 
-function GameOver(playerJumpHeight,CarDistance){
+function GameOver(playerJumpHeight,carDistance,cityDistance,cloudsDistance){
+    player.src = "images/explosion.png";
     RemoveClasses();
-    gameOverScreen.style.display = "grid";
+    gameOverScreen.style.display = "flex";
 
-    car.style.left = `${carDistance}px`
-    player.style.bottom = `${playerJumpHeight}px`
+    player.style.bottom = `${playerJumpHeight}px`;
+    car.style.left = `${carDistance}px`;
+    city.style.left = `${cityDistance}px`;
+    clouds.style.left = `${cloudsDistance}px`;
 }
 
 function RemoveClasses(){

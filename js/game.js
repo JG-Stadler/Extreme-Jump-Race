@@ -29,12 +29,12 @@ const ColisionVerivication = window.setInterval(()=>{
     car_right_distance = window.getComputedStyle(car).right.replace("px","");
     player_jump_height = window.getComputedStyle(player).bottom.replace("px","");
 
-    clouds_distance = clouds.offsetLeft
+    clouds_distance = clouds.offsetLeft;
     city_distance = city.offsetLeft;
 
     if(carDistance <= car_limit_distance
         && car_right_distance <= car_outside_the_player_line
         && player_jump_height <= car.clientHeight - car.clientHeight*0.2){
-        GameOver(player_jump_height,carDistance,)
+        GameOver(player_jump_height,carDistance,city_distance,clouds_distance)
     }
 },100);
