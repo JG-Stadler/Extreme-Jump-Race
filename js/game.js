@@ -1,3 +1,6 @@
+const GameWindow = document.getElementById("game-window")
+
+
 const JumpButton = document.getElementById("jumpButton");
 
 JumpButton.addEventListener("click",()=>{
@@ -10,25 +13,21 @@ JumpButton.addEventListener("click",()=>{
 });
 
 // Colision verification / Verificação de colisão
-const gamewindow = document.getElementById("game-window");
 
-let limit_car_distance = player.offsetLeft + player.clientWidth;
-let min_player_height = car.clientHeight;
-let car_out_player_line = gamewindow.clientWidth - player.offsetLeft;
+let car_limit_distance = player.offsetLeft + player.clientWidth;
+let carDistance;
 let player_jump_height;
-let car_distance;
+let car_right_distance;
+let car_outside_the_player_line = GameWindow.clientWidth - player.offsetLeft;
 
-    const fiviPCCarHeight = car.clientHeight*0.5;
-    const car_height = car.clientHeight - fiviPCCarHeight;
+const ColisionVerivication = window.setInterval(()=>{
+    carDistance = car.offsetLeft;
+    car_right_distance = window.getComputedStyle(car).right.replace("px","");
+    player_jump_height = window.getComputedStyle(player).bottom.replace("px","");
 
-
-setInterval(() => {
-    car_distance = +window.getComputedStyle(car).right.replace("px","");
-    player_jump_height = +window.getComputedStyle(player).bottom.replace("px","");
-
-    if(car_distance >= limit_car_distance
-        && car_distance <car_out_player_line
-        && player_jump_height < car_height){
-            console.log("perdeu")
-        }
-}, 50);
+    if(carDistance <= car_limit_distance
+        && car_right_distance >= car_outside_the_player_line
+        && player_jump_height <= car.clientHeight){
+        console.log("perdeu")
+    }
+},100);

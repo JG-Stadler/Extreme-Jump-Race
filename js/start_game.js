@@ -18,7 +18,7 @@ startGame_Button.addEventListener("click",()=>{
 // start Animations
 
 function StartGame(){
-    car.classList = "carActive";
-    city.classList = "cityActive";
-    clouds.classList = "cloudsActive";
+    car.classList.add("carActive");
+    city.classList.add("cityActive");
+    clouds.classList.add("cloudsActive");
 }
