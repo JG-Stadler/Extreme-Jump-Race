@@ -16,7 +16,7 @@ function GameOver(playerJumpHeight,carDistance,cityDistance,cloudsDistance){
 
     setInterval(()=>{
         player.src = "images/explosion.png";
-    },500)
+    },100)
 }
 
 function RemoveClasses(){
