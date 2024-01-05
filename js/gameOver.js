@@ -7,13 +7,16 @@ function GameOver(playerJumpHeight,carDistance,cityDistance,cloudsDistance){
     PlayGameOverMusic();
     RemoveClasses();
     PlayExplosionSound();
-    player.src = "images/explosion.png";
     gameOverScreen.style.display = "flex";
 
     player.style.bottom = `${playerJumpHeight}px`;
     car.style.left = `${carDistance}px`;
     city.style.left = `${cityDistance}px`;
     clouds.style.left = `${cloudsDistance}px`;
+
+    setInterval(()=>{
+        player.src = "images/explosion.png";
+    },500)
 }
 
 function RemoveClasses(){
