@@ -1,0 +1,66 @@
+@font-face {
+    font-family: "8-bit-pusab";
+    src: url(../fonts/8-bit-pusab.ttf);
+}
+*{
+    font-family: "8-bit-pusab", Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: #282B32;
+}
+.logo{
+    width: 200px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    object-fit: contain;
+}
+.game-window{
+    width: 800px;
+    height: 500px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+    box-shadow: 0 0 30px black;
+    background: linear-gradient(to bottom, #000080, #191970, #00008B, #0000CD, #483D8B, #4169E1);
+}
+.menu{
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/menu_background.jpg);
+    background-position: top center;
+    background-size: contain;
+    z-index: 3;
+    position: relative;
+}
+.menu-buttons{
+    z-index: 4;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 1.3rem;
+    text-shadow: 4px 4px 0 black;
+    text-transform: uppercase;
+    line-height: 3rem;
+}
+.menu-buttons>a{
+    text-decoration: none;
+}
+.play{
+    font-size: 2rem;  
+    text-shadow: 4px 4px 0 black; 
+    text-transform: uppercase;
+}
+.menu::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: radial-gradient(#00000048,#000000);
+}

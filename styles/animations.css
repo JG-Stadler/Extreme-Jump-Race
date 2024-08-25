@@ -1,0 +1,31 @@
+.active-animations>.clouds{
+    animation: ElementMovement 30s linear infinite ;
+}
+.active-animations>.city{
+    animation: ElementMovement 15s linear infinite;
+}
+.active-animations>.car{
+    animation: ElementMovement 4s linear infinite;
+}
+.player-jumping{
+    animation: Jump linear 2s;
+}
+@keyframes ElementMovement {
+    from{
+        left: 150%;
+    }
+    to{
+        left: -100%;
+    }
+}
+@keyframes Jump {
+    0%{
+        bottom: 0;
+    }
+    50%{
+        bottom: 60%;
+    }
+    100%{
+        bottom: 0;
+    }
+}
