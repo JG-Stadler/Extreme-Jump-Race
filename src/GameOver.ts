@@ -13,5 +13,7 @@ function GameOver(Pposition:number,CLposition:number,Cposition:number,CarPositio
         // Explosão do rôbo
     player.src = "./images/explosion.png";
     PlayExplosionSoundEffect();
+        // Ligar tela de pontuação final 
+    SetFinalScore();    
     GameOverWindow.style.display = "flex";
 }
