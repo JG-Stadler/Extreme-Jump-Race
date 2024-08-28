@@ -9,9 +9,9 @@ body{
     background-color: #282B32;
 }
 .logo{
-    width: 200px;
-    position: fixed;
-    bottom: 0;
+    width: 100px;
+    position: absolute;
+    top: 0;
     right: 0;
     object-fit: contain;
 }
