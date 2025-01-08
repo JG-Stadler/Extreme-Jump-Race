@@ -11,6 +11,7 @@ function Restart(){
     city.style.left = "100%";
     clouds.style.left = "100%";
     player.style.bottom = "0%";
+    car.style.animationDuration = "4s";
 //Reset de pontuação
     currentScore = 0;
     score.innerText = "0";
